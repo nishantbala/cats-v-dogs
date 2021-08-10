@@ -1,0 +1,9 @@
+include static/css/style.css
+include static/model_negative.h5
+include static/model_positive.h5
+include static/model_neutral.h5
+include static/negtokenizer.pkl
+include static/postokenizer.pkl
+include static/neuttokenizer.pkl
+include templates/index.html
+include templates/index-redirect.html
