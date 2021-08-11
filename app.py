@@ -29,11 +29,11 @@ def predict():
     """
     For rendering results on HTML GUI
     """
-    content = request.files['file'].read()
+    f = request.files['file']
+    content = f.read()
     res_image = b64encode(content).decode("utf-8")
     target_size = (150, 150)
     img = Image.open(io.BytesIO(content))
-    img = img.convert('RGB')
     img = img.resize(target_size, Image.NEAREST)
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
